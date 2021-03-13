@@ -1,6 +1,6 @@
 # Weather Check Application
 
-Try react, redux, saga in type-script purpose
+Try react, redux, saga in type-script purpose.\
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) - Typescript template.
 
 ## Getting Started
