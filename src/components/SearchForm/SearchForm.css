@@ -1,0 +1,14 @@
+form {
+  position: relative;
+}
+
+.autocomplete-wrapper {
+  position: absolute;
+  z-index: 1;
+  width: 60%;
+  top: 40px;
+  max-height: 300px;
+  overflow-y: auto;
+  left: 20%;
+  border: 1px solid black;
+}

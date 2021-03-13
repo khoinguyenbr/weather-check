@@ -1,0 +1,8 @@
+.card-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-wrapper .card {
+  width: 16%;
+}

@@ -2,19 +2,50 @@
   "name": "weather-check",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://www.metaweather.com/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
-    "@types/jest": "^26.0.15",
-    "@types/node": "^12.0.0",
-    "@types/react": "^17.0.0",
-    "@types/react-dom": "^17.0.0",
+    "axios": "^0.21.1",
+    "bootstrap": "4.6.0",
+    "bootstrap-icons": "^1.4.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-redux": "^7.2.2",
     "react-scripts": "4.0.3",
-    "typescript": "^4.1.2",
-    "web-vitals": "^1.0.1"
+    "redux": "^4.0.5",
+    "redux-saga": "^1.1.3",
+    "typescript": "^4.1.2"
+  },
+  "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/jest": "^26.0.15",
+    "@types/node": "^12.0.0",
+    "@types/react": "^17.0.3",
+    "@types/react-dom": "^17.0.1",
+    "@types/react-redux": "^7.1.16",
+    "@types/redux": "^3.6.0",
+    "@types/redux-saga": "^0.10.5",
+    "@typescript-eslint/eslint-plugin": "^4.16.1",
+    "@typescript-eslint/parser": "^4.16.1",
+    "eslint": "^7.21.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-jest": "^24.1.9",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "prettier": "^2.2.1",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-mock-store": "^1.5.4"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{ts,tsx}",
+      "!src/index.tsx",
+      "!src/store/index.ts",
+      "!src/react-app-env.d.ts"
+    ]
   },
   "scripts": {
     "start": "react-scripts start",
