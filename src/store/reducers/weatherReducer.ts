@@ -8,11 +8,13 @@ import {
 
 export type WeatherState = {
   isLoading: boolean;
+  city: string;
   data: WeatherModel[];
 };
 
 export const initialState: WeatherState = {
   isLoading: false,
+  city: '',
   data: [],
 };
 
@@ -22,11 +24,12 @@ export default (
 ): WeatherState => {
   switch (action.type) {
     case START_REQUEST_WEATHER:
-      return { ...state, isLoading: true };
+      return { ...state, isLoading: true, data: [], city: '' };
     case REQUEST_WEATHER_SUCCESS:
-      return { ...state, isLoading: false, data: action.payload };
+      const { data, city } = action.payload;
+      return { ...state, isLoading: false, data, city };
     case REQUEST_WEATHER_FAILURE:
-      return { ...state, isLoading: false, data: [] };
+      return { ...state, isLoading: false, data: [], city: '' };
     default:
       return state;
   }

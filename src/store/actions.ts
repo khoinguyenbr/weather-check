@@ -1,4 +1,4 @@
-import { CityModel, WeatherModel } from '../models';
+import { CityModel, IWeatherDataPayload } from '../models';
 import {
   START_SEARCH_CITY,
   SEARCH_CITY_SUCCESS,
@@ -26,11 +26,11 @@ export function clearCities(): ClearCitiesAction {
   return { type: CLEAR_CITIES };
 }
 
-export function getWeather(id: number): GetWeatherAction {
-  return { type: START_REQUEST_WEATHER, payload: id };
+export function getWeather(city: CityModel): GetWeatherAction {
+  return { type: START_REQUEST_WEATHER, payload: city };
 }
 
-export function getWeatherSuccess(data: WeatherModel[]): GetWeatherSuccessAction {
+export function getWeatherSuccess(data: IWeatherDataPayload): GetWeatherSuccessAction {
   return { type: REQUEST_WEATHER_SUCCESS, payload: data };
 }
 

@@ -5,16 +5,20 @@ import { connect } from 'react-redux';
 import { RootState } from '../../store/reducers';
 import { startSearchCity, clearCities, getWeather } from '../../store/actions';
 import SearchForm from './SearchForm';
+import { CityModel } from '../../models';
 
-const mapStateToProps = (state: RootState) => ({
-  isLoading: state.cityAutocomplete.isLoading || state.weather.isLoading,
-  cities: state.cityAutocomplete.cities,
-});
+const mapStateToProps = (state: RootState) => {
+  const { cityAutocomplete, weather } = state;
+  return {
+    isLoading: cityAutocomplete.isLoading || weather.isLoading,
+    cities: cityAutocomplete.cities,
+  };
+};
 
 const mapDispatchToProps = (dispatch: Dispatch) => ({
   searchCity: (city: string) => dispatch(startSearchCity(city)),
   clearCities: () => dispatch(clearCities()),
-  getWeather: (id: number) => dispatch(getWeather(id)),
+  getWeather: (city: CityModel) => dispatch(getWeather(city)),
 });
 
 type StateToProps = ReturnType<typeof mapStateToProps>;

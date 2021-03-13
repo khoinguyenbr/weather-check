@@ -4,10 +4,10 @@ import { connect } from 'react-redux';
 import { RootState } from '../../store/reducers';
 import WeatherList from './WeatherList';
 
-const mapStateToProps = (state: RootState) => ({
-  isLoading: state.weather.isLoading,
-  weatherData: state.weather.data,
-});
+const mapStateToProps = (state: RootState) => {
+  const { isLoading, data, city } = state.weather;
+  return { isLoading, city, weatherData: data };
+};
 
 type StateToProps = ReturnType<typeof mapStateToProps>;
 type Props = StateToProps;

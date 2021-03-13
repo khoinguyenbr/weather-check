@@ -8,8 +8,8 @@ export function* getWeatherHandle(action: GetWeatherAction): SagaIterator {
   yield put(clearCities());
   const { payload } = action;
   try {
-    const weatherData = yield call(getWeather, payload);
-    yield put(getWeatherSuccess(weatherData));
+    const weatherData = yield call(getWeather, payload.woeid);
+    yield put(getWeatherSuccess({ data: weatherData, city: payload.title }));
   } catch {
     yield put(getWeatherFailure());
   }

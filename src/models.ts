@@ -9,6 +9,11 @@ export interface WeatherModel {
   maxTemp: number;
 }
 
+export interface IWeatherDataPayload {
+  data: WeatherModel[];
+  city: string;
+}
+
 export interface ICityResponse {
   title: string;
   location_type: string;

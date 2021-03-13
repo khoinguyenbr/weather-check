@@ -11,7 +11,7 @@ type Props = {
   cities: CityModel[];
   clearCities(): void;
   searchCity(city: string): void;
-  getWeather(woeid: number): void;
+  getWeather(city: CityModel): void;
 };
 
 const LENGTH_TO_SEARCH = 3;
@@ -39,13 +39,13 @@ const SearchForm: React.FC<Props> = ({
   const keyUpHandle = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter' && cities.length) {
       setInput(cities[0].title);
-      getWeather(cities[0].woeid);
+      getWeather(cities[0]);
     }
   };
 
   const selectCity = (city: CityModel) => {
     setInput(city.title);
-    getWeather(city.woeid);
+    getWeather(city);
   };
 
   return (

@@ -4,5 +4,6 @@
 }
 
 .card-wrapper .card {
-  width: 16%;
+  width: 100%;
+  margin: 0 10px;
 }

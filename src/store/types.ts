@@ -1,4 +1,4 @@
-import { CityModel, WeatherModel } from '../models';
+import { CityModel, IWeatherDataPayload } from '../models';
 
 export const START_SEARCH_CITY = 'START_SEARCH_CITY';
 export const SEARCH_CITY_SUCCESS = 'SEARCH_CITY_SUCCESS';
@@ -28,12 +28,12 @@ export type SearchCityActionTypes =
 
 export interface GetWeatherAction {
   type: typeof START_REQUEST_WEATHER;
-  payload: number;
+  payload: CityModel;
 }
 
 export interface GetWeatherSuccessAction {
   type: typeof REQUEST_WEATHER_SUCCESS;
-  payload: WeatherModel[];
+  payload: IWeatherDataPayload;
 }
 
 export interface GetWeatherFailureAction {

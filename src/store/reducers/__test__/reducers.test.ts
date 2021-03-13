@@ -66,7 +66,7 @@ describe('Test city autocomplete reducer', () => {
 
 describe('Test weather reducer', () => {
   test('should update loading when start request weather', () => {
-    const action = getWeather(1231);
+    const action = getWeather({ title: 'Ho Chi Minh', woeid: 1321 });
     const actual = rootReducer(initialState, action);
     expect(actual).toEqual({
       ...initialState,
@@ -75,11 +75,11 @@ describe('Test weather reducer', () => {
   });
 
   test('should update weather data to store when get weatther success', () => {
-    const action = getWeatherSuccess(weatherData);
+    const action = getWeatherSuccess({ data: weatherData, city: 'Ho Chi Minh' });
     const actual = rootReducer(initialState, action);
     expect(actual).toEqual({
       ...initialState,
-      weather: { ...initialState.weather, data: weatherData },
+      weather: { ...initialState.weather, data: weatherData, city: 'Ho Chi Minh' },
     });
   });
 

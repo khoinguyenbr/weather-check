@@ -1,5 +1,74 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Test correct UI renders app when loading forecast 1`] = `
+<div>
+  <div
+    class="jumbotron"
+  >
+    <h1
+      class="display-4"
+    >
+      Weather Demo
+    </h1>
+    <p>
+      This is a simple weather information app
+    </p>
+  </div>
+  <div
+    class="container"
+  >
+    <form
+      data-testid="search-form"
+    >
+      <div
+        class="form-group"
+      >
+        <div
+          class="input-group"
+        >
+          <div
+            class="input-group-prepend"
+          >
+            <div
+              class="input-group-text"
+            >
+              <img
+                src="search.svg"
+              />
+            </div>
+          </div>
+          <input
+            class="form-control"
+            id="searchInput"
+            placeholder="City"
+            type="text"
+            value=""
+          />
+          <div
+            class="input-group-append"
+          >
+            <div
+              class="input-group-text"
+            >
+              <span
+                class="spinner-border spinner-border-sm text-primary"
+                role="status"
+              >
+                <span
+                  class="sr-only"
+                >
+                  Loading...
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+`;
+
 exports[`Test correct UI renders app when searching city 1`] = `
 <div>
   <div
@@ -207,146 +276,155 @@ exports[`Test correct UI renders app with city forecast 1`] = `
     </form>
   </div>
   <div
-    class="container card-wrapper"
+    class="container"
   >
+    <h3
+      class="text-center p-5"
+    >
+      Ho Chi Minh
+    </h3>
     <div
-      class="card"
+      class="card-wrapper"
     >
       <div
-        class="card-body"
+        class="card"
       >
-        <h5
-          class="card-title"
+        <div
+          class="card-body"
         >
-          Saturday
-          :
-        </h5>
-        <p
-          class="cart-text"
-        >
-          Min: 
-          28
-          °C
-        </p>
-        <p
-          class="cart-text"
-        >
-          Max: 
-          38
-          °C
-        </p>
+          <h5
+            class="card-title"
+          >
+            Saturday
+            :
+          </h5>
+          <p
+            class="cart-text"
+          >
+            Min: 
+            28
+            °C
+          </p>
+          <p
+            class="cart-text"
+          >
+            Max: 
+            38
+            °C
+          </p>
+        </div>
       </div>
-    </div>
-    <div
-      class="card"
-    >
       <div
-        class="card-body"
+        class="card"
       >
-        <h5
-          class="card-title"
+        <div
+          class="card-body"
         >
-          Sunday
-          :
-        </h5>
-        <p
-          class="cart-text"
-        >
-          Min: 
-          28
-          °C
-        </p>
-        <p
-          class="cart-text"
-        >
-          Max: 
-          38
-          °C
-        </p>
+          <h5
+            class="card-title"
+          >
+            Sunday
+            :
+          </h5>
+          <p
+            class="cart-text"
+          >
+            Min: 
+            28
+            °C
+          </p>
+          <p
+            class="cart-text"
+          >
+            Max: 
+            38
+            °C
+          </p>
+        </div>
       </div>
-    </div>
-    <div
-      class="card"
-    >
       <div
-        class="card-body"
+        class="card"
       >
-        <h5
-          class="card-title"
+        <div
+          class="card-body"
         >
-          Monday
-          :
-        </h5>
-        <p
-          class="cart-text"
-        >
-          Min: 
-          27
-          °C
-        </p>
-        <p
-          class="cart-text"
-        >
-          Max: 
-          39
-          °C
-        </p>
+          <h5
+            class="card-title"
+          >
+            Monday
+            :
+          </h5>
+          <p
+            class="cart-text"
+          >
+            Min: 
+            27
+            °C
+          </p>
+          <p
+            class="cart-text"
+          >
+            Max: 
+            39
+            °C
+          </p>
+        </div>
       </div>
-    </div>
-    <div
-      class="card"
-    >
       <div
-        class="card-body"
+        class="card"
       >
-        <h5
-          class="card-title"
+        <div
+          class="card-body"
         >
-          Tuesday
-          :
-        </h5>
-        <p
-          class="cart-text"
-        >
-          Min: 
-          28
-          °C
-        </p>
-        <p
-          class="cart-text"
-        >
-          Max: 
-          38
-          °C
-        </p>
+          <h5
+            class="card-title"
+          >
+            Tuesday
+            :
+          </h5>
+          <p
+            class="cart-text"
+          >
+            Min: 
+            28
+            °C
+          </p>
+          <p
+            class="cart-text"
+          >
+            Max: 
+            38
+            °C
+          </p>
+        </div>
       </div>
-    </div>
-    <div
-      class="card"
-    >
       <div
-        class="card-body"
+        class="card"
       >
-        <h5
-          class="card-title"
+        <div
+          class="card-body"
         >
-          Wednesday
-          :
-        </h5>
-        <p
-          class="cart-text"
-        >
-          Min: 
-          28
-          °C
-        </p>
-        <p
-          class="cart-text"
-        >
-          Max: 
-          38
-          °C
-        </p>
+          <h5
+            class="card-title"
+          >
+            Wednesday
+            :
+          </h5>
+          <p
+            class="cart-text"
+          >
+            Min: 
+            28
+            °C
+          </p>
+          <p
+            class="cart-text"
+          >
+            Max: 
+            38
+            °C
+          </p>
+        </div>
       </div>
     </div>
   </div>

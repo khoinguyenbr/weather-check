@@ -21,6 +21,7 @@ const initialState: RootState = {
   weather: {
     isLoading: false,
     data: [],
+    city: '',
   },
   cityAutocomplete: {
     isLoading: false,
@@ -86,12 +87,24 @@ describe('Test correct UI', () => {
     expect(container).toMatchSnapshot();
   });
 
+  test('renders app when loading forecast', () => {
+    const { container } = setUp({
+      ...initialState,
+      weather: {
+        ...initialState.weather,
+        isLoading: true,
+      },
+    });
+    expect(container).toMatchSnapshot();
+  });
+
   test('renders app with city forecast', () => {
     const { container } = setUp({
       ...initialState,
       weather: {
         ...initialState.weather,
         data: weatherData,
+        city: 'Ho Chi Minh',
       },
     });
     expect(container).toMatchSnapshot();
@@ -188,14 +201,14 @@ describe('Test action behavior', () => {
     const actions = store.getActions();
     expect(actions).toEqual([
       {
-        payload: 1321,
+        payload: { title: 'Ho Chi Minh', woeid: 1321 },
         type: 'START_REQUEST_WEATHER',
       },
       {
         type: 'CLEAR_CITIES',
       },
       {
-        payload: weatherData,
+        payload: { data: weatherData, city: 'Ho Chi Minh' },
         type: 'REQUEST_WEATHER_SUCCESS',
       },
     ]);
@@ -220,14 +233,14 @@ describe('Test action behavior', () => {
     const actions = store.getActions();
     expect(actions).toEqual([
       {
-        payload: 1321,
+        payload: { title: 'Ho Chi Minh', woeid: 1321 },
         type: 'START_REQUEST_WEATHER',
       },
       {
         type: 'CLEAR_CITIES',
       },
       {
-        payload: weatherData,
+        payload: { data: weatherData, city: 'Ho Chi Minh' },
         type: 'REQUEST_WEATHER_SUCCESS',
       },
     ]);
@@ -243,7 +256,7 @@ describe('Test action behavior', () => {
     const actions = store.getActions();
     expect(actions).toEqual([
       {
-        payload: 1321,
+        payload: { title: 'Ho Chi Minh', woeid: 1321 },
         type: 'START_REQUEST_WEATHER',
       },
       {
